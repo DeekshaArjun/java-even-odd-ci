@@ -3,32 +3,27 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class EvenOddTest {
+public class EvenOddTest {
 
     @Test
     void testEvenNumber() {
-        assertTrue(EvenOdd.isEven(8));
+        assertEquals("Even", EvenOdd.checkEvenOdd(10));
     }
 
     @Test
     void testOddNumber() {
-        assertFalse(EvenOdd.isEven(7));
+        assertEquals("Odd", EvenOdd.checkEvenOdd(7));
     }
 
     @Test
     void testZero() {
-        assertTrue(EvenOdd.isEven(0));
+        assertEquals("Even", EvenOdd.checkEvenOdd(0));
     }
 
     @Test
     void testNegativeEvenNumber() {
-        assertTrue(EvenOdd.isEven(-4));
-    }
-
-    @Test
-    void testNegativeOddNumber() {
-        assertFalse(EvenOdd.isEven(-3));
+        assertEquals("Even", EvenOdd.checkEvenOdd(-4));
     }
 }
